@@ -60,6 +60,8 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.addAllowedOrigin("http://localhost:3000");  // Your React URL
+        configuration.addAllowedOrigin("https://pacienti.netlify.app");  // Your React URL
+        configuration.addAllowedOrigin("*");  // Your React URL
         configuration.addAllowedMethod("*");  // Allow all HTTP methods
         configuration.addAllowedHeader("*");  // Allow all headers
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
